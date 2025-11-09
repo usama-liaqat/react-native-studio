@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "before:init": [
+      "rm -Rf lib tsconfig.tsbuildinfo",
+      "yarn clean",
+      "yarn prepare"
+    ],
+    "after:release": "echo Successfully released ${name} v${version} from repository ${repo.repository}."
+  },
+  "git": {
+    "commitMessage": "chore: release @react-native-studio/cookies ${version}",
+    "requireCleanWorkingDir": true,
+    "tagAnnotation": "Release @react-native-studio/cookies v${version}",
+    "tagName": "react-native-studio-cookies-v${version}"
+  },
+  "npm": {
+    "publish": true,
+    "skipChecks": false
+  },
+  "github": {
+    "release": true
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "angular"
+      }
+    }
+  }
+}
