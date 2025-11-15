@@ -1,7 +1,7 @@
 {
-  "name": "@react-native-studio/media-info",
+  "name": "@react-native-studio/media-metadata",
   "version": "0.0.0",
-  "description": "Media Info",
+  "description": "media-metadata",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
   "exports": {
@@ -12,10 +12,18 @@
     },
     "./package.json": "./package.json"
   },
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "cpp",
+    "*.podspec",
+    "react-native.config.js"
+  ],
   "scripts": {
     "test": "jest",
     "typecheck": "tsc",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build example/android/build lib",
     "prepare": "bob build",
     "release": "release-it --only-version"
@@ -36,8 +44,16 @@
   },
   "homepage": "https://github.com/usama-liaqat/react-native-studio#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
+  "contributors": [
+    {
+      "name": "Usama Liaqat",
+      "email": "m.usama.liaqat@gmail.com",
+      "url": "https://github.com/usama-liaqat"
+    }
+  ],
   "devDependencies": {
     "@release-it/conventional-changelog": "^10.0.1",
     "@types/jest": "^29.5.14",
@@ -48,23 +64,29 @@
     "react-native": "0.81.1",
     "react-native-builder-bob": "^0.40.13",
     "release-it": "^19.0.4",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.2"
   },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
   },
   "codegenConfig": {
-    "name": "MediaInfoSpec",
+    "name": "MediaMetadataSpec",
     "type": "modules",
     "jsSrcsDir": "src",
     "android": {
-      "javaPackageName": "com.mediainfo"
+      "javaPackageName": "com.media.metadata"
     }
   },
   "create-react-native-library": {
     "languages": "kotlin-objc",
     "type": "turbo-module",
-    "version": "0.54.8"
+    "tools": [
+      "eslint",
+      "lefthook",
+      "release-it",
+      "jest"
+    ],
+    "version": "0.55.0"
   }
 }

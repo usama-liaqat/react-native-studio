@@ -1,6 +1,6 @@
-#import "MediaInfo.h"
+#import "MediaMetadata.h"
 
-@implementation MediaInfo
+@implementation MediaMetadata
 - (NSNumber *)multiply:(double)a b:(double)b {
     NSNumber *result = @(a * b);
 
@@ -10,12 +10,12 @@
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
     (const facebook::react::ObjCTurboModule::InitParams &)params
 {
-    return std::make_shared<facebook::react::NativeMediaInfoSpecJSI>(params);
+    return std::make_shared<facebook::react::NativeMediaMetadataSpecJSI>(params);
 }
 
 + (NSString *)moduleName
 {
-  return @"MediaInfo";
+  return @"MediaMetadata";
 }
 
 @end

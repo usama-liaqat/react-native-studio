@@ -2,8 +2,8 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "@react-native-studio/media-info": ["./packages/media-info/src/index"],
-      "@react-native-studio/cookies": ["./packages/cookies/src/index"]
+      "@react-native-studio/cookies": ["./packages/cookies/src/index"],
+      "@react-native-studio/media-metadata": ["./packages/media-metadata/src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

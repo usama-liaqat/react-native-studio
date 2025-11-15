@@ -33,6 +33,10 @@
     "prettier": "2.8.8",
     "react-test-renderer": "19.1.1"
   },
+  "localDependencies": [
+    "@react-native-studio/cookies",
+    "@react-native-studio/media-metadata"
+  ],
   "engines": {
     "node": ">=20"
   }

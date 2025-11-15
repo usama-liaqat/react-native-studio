@@ -13,11 +13,13 @@
     "./package.json": "./package.json"
   },
   "files": [
+    "src",
+    "lib",
     "android",
     "ios",
-    "lib/",
-    "src/",
-    "Cookies.podspec"
+    "cpp",
+    "*.podspec",
+    "react-native.config.js"
   ],
   "scripts": {
     "test": "jest",
@@ -79,6 +81,12 @@
   "create-react-native-library": {
     "languages": "kotlin-objc",
     "type": "turbo-module",
-    "version": "0.54.8"
+    "tools": [
+      "eslint",
+      "lefthook",
+      "release-it",
+      "jest"
+    ],
+    "version": "0.55.0"
   }
 }
